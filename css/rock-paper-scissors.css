@@ -1,0 +1,73 @@
+.game1 {
+  width: 40vw;
+}
+.game1__score {
+  width: 100%;
+  margin-bottom: 3vh;
+  display: flex;
+  justify-content: space-between;
+}
+.game1__score__computer {
+  display: flex;
+  flex-direction: column;
+}
+.game1__score__user {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.game1__show {
+  width: 100%;
+  margin-bottom: 3vh;
+  display: flex;
+  justify-content: space-between;
+}
+.game1__show__computer, .game1__show__user {
+  width: 45%;
+  height: 40vh;
+  border: 1px solid #D1FF4E;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game1__show__computer svg, .game1__show__user svg {
+  background-color: transparent;
+  width: 50%;
+  height: auto;
+}
+.game1__user-choice {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.game1__user-choice__title {
+  margin-bottom: 3vh;
+  font-size: 2rem;
+  color: #D1FF4E;
+}
+.game1__user-choice__buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.game1__user-choice__buttons button {
+  width: 30%;
+  height: 8vh;
+  border: 1px solid #D1FF4E;
+  border-radius: 50px;
+}
+.game1__user-choice__buttons button h3 {
+  background-color: transparent;
+  font-size: 3rem;
+}
+.game1__user-choice__buttons button:hover {
+  background-color: #D1FF4E;
+  color: #0B0B0B;
+  cursor: pointer;
+}
+.game1__user-choice__buttons button:hover h3 {
+  color: #0B0B0B;
+}

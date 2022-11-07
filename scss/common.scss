@@ -73,3 +73,10 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
+// in game page
+.inner-title {
+    color: $point-color;
+    text-decoration: underline;
+    margin-bottom: 5vh;
+}

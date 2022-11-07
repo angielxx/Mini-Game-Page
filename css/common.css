@@ -66,3 +66,9 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
+.inner-title {
+  color: #D1FF4E;
+  text-decoration: underline;
+  margin-bottom: 5vh;
+}
