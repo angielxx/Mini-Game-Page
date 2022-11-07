@@ -1,0 +1,25 @@
+body h2 {
+  color: white;
+  font-size: 4rem;
+}
+
+body h3 {
+  color: white;
+  font-size: 1.8rem;
+}
+
+body {
+  color: white;
+}
+
+.nav-bar {
+  height: 7%;
+  display: flex;
+  padding: 0px 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: white 1px solid;
+}
+.nav-bar a {
+  text-decoration: none;
+}

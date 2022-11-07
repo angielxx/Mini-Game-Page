@@ -1,0 +1,17 @@
+@import "./common.scss";
+
+$font : 'VT323', monospace;
+
+* {
+  font-family: $font;
+  background-color: $bg-color;
+}
+
+html, body, main {
+  height: 100%;
+  width: 100%
+}
+
+.hidden {
+    display: none;
+}

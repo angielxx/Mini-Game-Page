@@ -1,0 +1,126 @@
+@import "./common.scss";
+
+@keyframes rollDice {
+  0% {
+    bottom: 0px;
+  }
+
+  50% {
+    bottom: 20px;
+  }
+
+  100% {
+    bottom: 0px;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+.container__dice {
+  height: 150px;
+  position: relative;
+  // margin-bottom: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  a {
+    margin-bottom: 1vh;
+    img {
+      position: relative;
+      bottom: 0px;
+    }
+    &:hover {
+      img {
+        animation: rollDice 1s ease infinite;
+      }
+      & + .container__dice__random {
+        animation: fade 1s linear;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+  &__random {
+    opacity: 0;
+  }
+}
+
+article {
+  width: 100%;
+  height: calc( 93% - 1px );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+      height: 50%;
+      // margin-bottom: 15vh;
+    }
+    &__title {
+      position: relative;
+      height: 30vh;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      &__window {
+        height: 64px;
+        overflow: hidden;
+      }
+      &__list {
+        position: relative;
+        bottom: 0%;
+        transition-property: bottom;
+        transition-duration: 0.5s;
+      }
+    }
+    &__icons {
+      height: 250px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: calc(200px*5);
+
+      &__icon {
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        border: 1px $point-color solid;
+        display: flex;
+        justify-content: center;
+        align-items:flex-start;
+
+        svg {
+          position: relative;
+          top: 50px;
+          fill: white;
+          background-color: transparent;
+          width: 50%;
+        }
+
+        transition-property: height;
+        transition-duration: 0.5s;
+
+        &:hover {
+          height: 250px;
+          background-color: $point-color;
+          svg {
+            fill: black;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+body h2 {
+  font-size: 4rem;
+}
+
+body h3 {
+  font-size: 1.8rem;
+}
+
+.nav-bar {
+  height: 7%;
+  display: flex;
+  padding: 0px 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: white 1px solid;
+}
+.nav-bar a {
+  text-decoration: none;
+}
+
+* {
+  font-family: "VT323", monospace;
+  background-color: #0B0B0B;
+}
+
+html, body, main {
+  height: 100%;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}

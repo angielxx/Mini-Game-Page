@@ -1,0 +1,161 @@
+body h2 {
+  color: white;
+  font-size: 4rem;
+}
+
+body h3 {
+  color: white;
+  font-size: 1.8rem;
+}
+
+body {
+  color: white;
+}
+
+.nav-bar {
+  height: 7%;
+  display: flex;
+  padding: 0px 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: white 1px solid;
+}
+.nav-bar a {
+  text-decoration: none;
+}
+
+@-webkit-keyframes rollDice {
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 20px;
+  }
+  100% {
+    bottom: 0px;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rollDice {
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 20px;
+  }
+  100% {
+    bottom: 0px;
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+.container__dice {
+  height: 150px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.container__dice a {
+  margin-bottom: 1vh;
+}
+.container__dice a img {
+  position: relative;
+  bottom: 0px;
+}
+.container__dice a:hover img {
+  -webkit-animation: rollDice 1s ease infinite;
+          animation: rollDice 1s ease infinite;
+}
+.container__dice a:hover + .container__dice__random {
+  -webkit-animation: fade 1s linear;
+          animation: fade 1s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.container__dice__random {
+  opacity: 0;
+}
+
+article {
+  width: 100%;
+  height: calc(93% - 1px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+article .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+article .container h2 {
+  height: 50%;
+}
+article .container__title {
+  position: relative;
+  height: 30vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+article .container__title__window {
+  height: 64px;
+  overflow: hidden;
+}
+article .container__title__list {
+  position: relative;
+  bottom: 0%;
+  transition-property: bottom;
+  transition-duration: 0.5s;
+}
+article .container__icons {
+  height: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 1000px;
+}
+article .container__icons__icon {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  border: 1px #D1FF4E solid;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  transition-property: height;
+  transition-duration: 0.5s;
+}
+article .container__icons__icon svg {
+  position: relative;
+  top: 50px;
+  fill: white;
+  background-color: transparent;
+  width: 50%;
+}
+article .container__icons__icon:hover {
+  height: 250px;
+  background-color: #D1FF4E;
+}
+article .container__icons__icon:hover svg {
+  fill: black;
+}
