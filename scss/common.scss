@@ -1,6 +1,20 @@
 $bg-color: #0B0B0B;
 $point-color: #D1FF4E;
+$font : 'VT323', monospace;
 
+* {
+  font-family: $font;
+  background-color: $bg-color;
+}
+
+html, body, main {
+  height: 100%;
+  width: 100%
+}
+
+.hidden {
+    display: none;
+}
 
 body h2 {
     color: white;
@@ -26,4 +40,36 @@ body {
     a {
         text-decoration: none;
     }
+}
+
+.close-bar {
+    height: 7%;
+    // width: 100%;
+    display: flex;
+    padding: 0px 1.5rem;
+    justify-content: flex-end;
+    align-items: center;
+
+    &__button {
+        text-decoration: none;
+        width: 30px;
+        height: 30px;
+        border: 1px white solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        h3 {
+            margin: 0px;
+            position: relative;
+            bottom: 2px;
+            background-color: transparent;
+        }
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
