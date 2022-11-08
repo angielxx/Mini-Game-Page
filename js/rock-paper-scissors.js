@@ -1,6 +1,7 @@
 const choiceBtn = document.querySelectorAll('#choice');
 const computerDiv = document.querySelector('#computer');
 const userDiv = document.querySelector('#user');
+const modal = document.querySelector('#result');
 
 // 컴퓨터와 유저의 점수
 let computer_score;
@@ -94,8 +95,35 @@ const getGameResult = (computer, user) => {
 }
 
 // 4. 승부 결과 보여주기
+const closeResult = () => {
+  modal.style.display = 'none'
+}
 const showResult = (message) => {
+  modal.innerHTML = `${message}`
+  modal.style.display = 'flex'
+  setTimeout(closeResult, 2000)
+}
 
+// 5. 점수 반영
+const paintScore = () => {
+  const computerScore = document.querySelector('#score-computer');
+  const userScore = document.querySelector('#score-user');
+  computerScore.innerText = computer_score;
+  userScore.innerText = user_score;
+}
+const changeScore = (winner) => {
+  if (winner === 'computer') {
+    computer_score += 50
+  } else {
+    user_score += 50
+  }
+  paintScore();
+}
+
+// 6. 화면 리셋
+const restartRound = () => {
+  userDiv.innerHTML = `<h3 class="game1__show__user__text">Choose your choice</h3>`
+  paintComputerDiv();
 }
 
 const resetGame = () => {
@@ -104,7 +132,7 @@ const resetGame = () => {
 }
 
 
-const playRound = (event) => {
+async function playRound(event) {
   // 유저의 선택
   const userChoice = event.currentTarget.dataset.userNum;
   
@@ -118,8 +146,30 @@ const playRound = (event) => {
   const message = getGameResult(comChoice, userChoice);
 
   // 4. 승부 결과 보여주기
-  showResult(message);
-  // 점수에 반영
+  setTimeout(showResult, 2000, message);
+  
+  // 5. 점수에 반영
+  let winner;
+  switch (message) {
+    case 'win':
+      winner = 'user';
+      changeScore(winner);
+      break;
+    case 'lose':
+      winner = 'computer';
+      changeScore(winner);
+      break;
+  }
+
+  // 6. 화면 리셋
+  setTimeout(restartRound, 4000);
 }
+
+const init = () => {
+  modal.style.display = 'none'
+  resetGame();
+}
+
+init();
 
 choiceBtn.forEach((btn) => {btn.addEventListener('click', playRound)})

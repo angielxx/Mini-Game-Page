@@ -15,6 +15,22 @@ $font : 'VT323', monospace;
     }
 }
 
+.result-modal {
+    position: absolute;
+    background-color: $bg-color;
+    width: 20vw;
+    height: 10vh;
+    border-radius: 30px;
+    color: $point-color;
+    border: 1px solid $point-color;
+    z-index: 10;
+    // offset-x | offset-y | blur-radius | spread-radius | color
+    box-shadow: 0px 0px 0px 9999px rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .game1 {
     width: 40vw;
     
