@@ -6,6 +6,15 @@ $bg-color: #0B0B0B;
 $point-color: #D1FF4E;
 $font : 'VT323', monospace;
 
+@keyframes keepBlink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
 .game1 {
     width: 40vw;
     
@@ -40,11 +49,16 @@ $font : 'VT323', monospace;
             display: flex;
             justify-content: center;
             align-items: center;
+
+            &__text {
+                animation: keepBlink 1.5s linear infinite;
+            }
             
-            svg {
+            img {
                 background-color: transparent;
-                width: 50%;
+                width: 70%;
                 height: auto;
+                filter: invert(100%);
             }
         }
     }

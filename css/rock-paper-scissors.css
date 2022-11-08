@@ -1,3 +1,19 @@
+@-webkit-keyframes keepBlink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes keepBlink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
 .game1 {
   width: 40vw;
 }
@@ -31,10 +47,15 @@
   justify-content: center;
   align-items: center;
 }
-.game1__show__computer svg, .game1__show__user svg {
+.game1__show__computer__text, .game1__show__user__text {
+  -webkit-animation: keepBlink 1.5s linear infinite;
+          animation: keepBlink 1.5s linear infinite;
+}
+.game1__show__computer img, .game1__show__user img {
   background-color: transparent;
-  width: 50%;
+  width: 70%;
   height: auto;
+  filter: invert(100%);
 }
 .game1__user-choice {
   width: 100%;
