@@ -5,7 +5,7 @@ const modal = document.querySelector('#result');
 
 // 컴퓨터와 유저의 점수
 let computer_score;
-let user_score;
+// let user_score;
 
 // 컴퓨터 이미지 반복 교체
 let num = 0;
